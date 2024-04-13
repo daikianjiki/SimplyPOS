@@ -20,8 +20,8 @@ export enum AccessLevel {
 
 export interface Employee {
     id: number //required contraint of a data object
-    username: number //username for POS is typically numberical
-    password: string | number 
+    username: string //username for POS is typically numberical
+    password: string
     firstName: string
     lastName: string
     accessLevel: AccessLevel //this will define the access level for each employee
