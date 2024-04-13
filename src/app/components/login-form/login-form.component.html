@@ -1,0 +1,9 @@
+<p>login-form works!</p>
+<form>
+    <label>Username: </label>
+    <input type="text" [(ngModel)]="employee.username" name="username">
+    <label>Password: </label>
+    <input type="password" [(ngModel)]="employee.password" name="password">
+    <button type="button" (click)="onSubmit()">Submit</button>
+    <button type="button" (click)="onCancel()">Cancel</button>
+</form>
