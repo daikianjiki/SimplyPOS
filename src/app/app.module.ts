@@ -7,13 +7,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
+import { TransactionPageComponent } from './pages/transaction-page/transaction-page.component';
+import { InventoryPageComponent } from './pages/inventory-page/inventory-page.component';
+import { EmployeePageComponent } from './pages/employee-page/employee-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    DashboardPageComponent,
+    TransactionPageComponent,
+    InventoryPageComponent,
+    EmployeePageComponent
   ],
   imports: [
     BrowserModule,
