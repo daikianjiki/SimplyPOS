@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AccessLevel, Employee } from 'src/app/models/employee';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login-form',
@@ -7,6 +8,8 @@ import { AccessLevel, Employee } from 'src/app/models/employee';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent {
+
+  constructor(private loginService : LoginService) {}
   
   employee : Employee = {
     id: 0,
@@ -18,6 +21,8 @@ export class LoginFormComponent {
   }
   
   onSubmit() {
+    this.loginService.loggedinEmployee = this.employee
+    console.log("Logged in employee: ", this.loginService.loggedinEmployee)
     console.log("Submit Button Clicked!")
     console.log("Username: ", this.employee.username)
     console.log("Password: ", this.employee.password)
