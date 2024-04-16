@@ -11,6 +11,7 @@ import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.co
 import { TransactionPageComponent } from './pages/transaction-page/transaction-page.component';
 import { InventoryPageComponent } from './pages/inventory-page/inventory-page.component';
 import { EmployeePageComponent } from './pages/employee-page/employee-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { EmployeePageComponent } from './pages/employee-page/employee-page.compo
     DashboardPageComponent,
     TransactionPageComponent,
     InventoryPageComponent,
-    EmployeePageComponent
+    EmployeePageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
