@@ -9,12 +9,38 @@ export class LoginService {
 
   constructor(private httpClient : HttpClient) { }
 
-  loggedinEmployee : Employee = {
+  loggedInEmployee : Employee = {
     id: 0,
     username: '',
     password: '',
     firstName: '',
     lastName: '',
     accessLevel: AccessLevel.ASSOCIATE
+  }
+  private isLoggedInValue: boolean = false
+
+  isLoggedIn(): boolean {
+    return this.isLoggedInValue
+  }
+
+  login(employee: Employee): void {
+    this.loggedInEmployee = employee
+    this.isLoggedInValue = true
+  }
+
+  logout() : void {
+    this.loggedInEmployee = {
+      id: 0,
+      username: '',
+      password: '',
+      firstName: '',
+      lastName: '',
+      accessLevel: AccessLevel.ASSOCIATE
+    }
+    this.isLoggedInValue = false
+  }
+
+  getLoggedInEmployee(): Employee | null {
+    return this.loggedInEmployee
   }
 }

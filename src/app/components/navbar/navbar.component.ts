@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  constructor(private loginService: LoginService) {}
+
+  onLogout() {
+    this.loginService.logout()
+    console.log("Employee logged in? ", this.loginService.isLoggedIn())
+    console.log("Logged in employee: ",this.loginService.getLoggedInEmployee())
+  }
 }

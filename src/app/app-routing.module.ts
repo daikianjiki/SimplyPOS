@@ -7,6 +7,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { TransactionPageComponent } from './pages/transaction-page/transaction-page.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardPageComponent },
   { path: 'employee', component: EmployeePageComponent },
   { path: 'inventory', component: InventoryPageComponent },
